@@ -2,6 +2,9 @@ FROM ballerina/ballerina:2201.13.1 AS ballerina-build
 
 USER root
 
+COPY ../Ballerina.toml /home/work-dir/Ballerina.toml
+COPY ../commons /home/work-dir/commons
+
 COPY . /home/work-dir/service
 WORKDIR /home/work-dir/service
 
